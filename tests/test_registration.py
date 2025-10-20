@@ -31,7 +31,7 @@ def generate_user():
         # use secrets.choice for cryptographic randomness
         return ''.join(secrets.choice(alphabet) for _ in range(length))
 
-    password = gen_password(14)
+    password = gen_password(7)
 
     return {
         "first_name": first_name,
