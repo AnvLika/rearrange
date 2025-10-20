@@ -69,37 +69,21 @@ def test_log_in():
     password_input.send_keys(creds["password"])
 
     submit_button.click()
-    #
-    # # --- Wait until login completes ---
-    # WebDriverWait(driver, 10).until(
-    #     EC.presence_of_element_located((By.ID, "logout-btn"))  # adjust selector
-    # )
-    #
-    # # --- Log out ---
-    # logout_button = driver.find_element(By.ID, "logout-btn")  # adjust selector
-    # logout_button.click()
-    #
-    # --- Optional: Wait to confirm login ---
-    # WebDriverWait(driver, 10).until(
-    #     EC.presence_of_element_located((By.XPATH, "//a[text()='Log out']"))  # user sees Log out btn
-    # )
+
 
     WebDriverWait(driver, 10).until(
         EC.presence_of_element_located((By.ID, "logout"))  # user sees Log out btn
     )
     WebDriverWait(driver, 10).until(
-        EC.presence_of_element_located((By.XPATH, "//h1[text()='Contact List']"))  # user sees Log out btn
+        EC.presence_of_element_located((By.XPATH, "//h1[text()='Contact List']"))  # user sees header
     )
 
     WebDriverWait(driver, 10).until(
-        EC.presence_of_element_located((By.XPATH, "//h1[text()='Contact List']"))  # user sees Log out btn
+        EC.presence_of_element_located((By.XPATH, "//h1[text()='Contact List']"))  # user sees Contact List table
     )
 
-    # WebDriverWait(driver, 10).until(
-    #     EC.presence_of_element_located((By.XPATH,"//contactTable"))
-    #                                    )
 
-    print("Login successfully!")
+    print("Registration was successfull!")
 
     # --- Close browser ---
     driver.quit()
