@@ -31,7 +31,11 @@ def generate_user():
         # use secrets.choice for cryptographic randomness
         return ''.join(secrets.choice(alphabet) for _ in range(length))
 
+<<<<<<< HEAD
     password = gen_password(7)
+=======
+    password = gen_password(14)
+>>>>>>> aa39e45199c9d748024350a9bd8c1a678db6522b
 
     return {
         "first_name": first_name,
@@ -83,7 +87,11 @@ def test_log_in():
     )
 
 
+<<<<<<< HEAD
     print("Registration was sucessfull!")
+=======
+    print("Registration was successfull!")
+>>>>>>> aa39e45199c9d748024350a9bd8c1a678db6522b
 
     # --- Close browser ---
     driver.quit()
