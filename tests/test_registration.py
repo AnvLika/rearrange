@@ -83,7 +83,7 @@ def test_log_in():
     )
 
 
-    print("Registration was successfull!")
+    print("Registration was sucessfull!")
 
     # --- Close browser ---
     driver.quit()
